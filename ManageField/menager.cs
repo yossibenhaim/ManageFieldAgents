@@ -46,6 +46,17 @@ namespace ManageField
             }
         }
 
+        public void printMenu()
+        {
+            Console.WriteLine("=== Main Menu ===");
+            Console.WriteLine("1 - Add Agent");
+            Console.WriteLine("2 - Update Agent Location");
+            Console.WriteLine("3 - Delete Agent");
+            Console.WriteLine("4 - Show All Agents");
+            Console.WriteLine("5 - Exit");
+            Console.Write("Enter your choice: ");
+        }
+
 
     }
 }
