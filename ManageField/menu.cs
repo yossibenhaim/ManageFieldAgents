@@ -15,31 +15,18 @@ namespace ManageField
         public void startMenu()
         {
             bool run = true;
-
             menuHelper.printMenu();
             string choiceStr;
+            int choice;
 
             while (run)
             {
                 choiceStr = Console.ReadLine();
+    
                 menuHelper.printMenu();
 
-                Console.WriteLine("menu");
-                while (true)
-                {
+                choice = menuHelper.CheckSelectedDigit(choiceStr);
 
-                    if (char.IsDigit(choiceStr[0]))
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        Console.Write("Invalid input. Please enter a number: ");
-                        choiceStr = Console.ReadLine();
-                    }
-                }
-
-                int choice = Convert.ToInt32(choiceStr);
                 switch (choice)
                 {
                     case 1:

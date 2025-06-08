@@ -1,4 +1,5 @@
-﻿using Org.BouncyCastle.Asn1;
+﻿using Mysqlx.Crud;
+using Org.BouncyCastle.Asn1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,8 @@ namespace ManageField
         public Agent createAgent()
         {
             Console.WriteLine("Enter ID:");
-            int id = Convert.ToInt32(Console.ReadLine());
+            
+            int id = CheckSelectedDigit(Console.ReadLine());
 
             Console.WriteLine("Enter Name Code:");
             string nameCode = Console.ReadLine();
@@ -29,14 +31,12 @@ namespace ManageField
             string status = Console.ReadLine();
 
             Console.WriteLine("Enter Number of Missions Completed:");
-            int missionsCompleted = Convert.ToInt32(Console.ReadLine());
+            int missionsCompleted = CheckSelectedDigit(Console.ReadLine());
 
 
             Agent newAgent = new Agent(id, nameCode, name, locasion, status, missionsCompleted);
             return newAgent;
         }
-
-       
 
         public void printAgent(List<Agent> agents)
         {
@@ -55,6 +55,23 @@ namespace ManageField
             Console.WriteLine("4 - Show All Agents");
             Console.WriteLine("5 - Exit");
             Console.Write("Enter your choice: ");
+        }
+        public int CheckSelectedDigit(string choiceStr)
+        {
+            while (true)
+            {
+                try
+                {
+                    return Convert.ToInt32(choiceStr);
+                }
+                catch
+                {
+                    Console.Write("Invalid input. Please enter a number: ");
+                    choiceStr = Console.ReadLine();
+                }
+
+
+            }
         }
 
 
