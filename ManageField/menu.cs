@@ -23,13 +23,16 @@ namespace ManageField
             Console.WriteLine("5 - Exit");
             Console.Write("Enter your choice: ");
 
-            string choiceStr = Console.ReadLine();
+            string choiceStr;
 
             while (run)
             {
+                choiceStr = Console.ReadLine();
+
                 Console.WriteLine("menu");
                 while (true)
                 {
+
                     if (char.IsDigit(choiceStr[0]))
                     {
                         break;
