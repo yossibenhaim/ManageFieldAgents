@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ManageField
 {
-    internal class Agent
+    public class Agent
     {
         public int id;
         public string nameCode;
