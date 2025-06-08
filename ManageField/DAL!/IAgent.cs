@@ -1,17 +1,17 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ManageField
+namespace ManageField.DAL_
 {
-    internal interface DAL
+    internal interface IAgentRepository
     {
-        void addAgent(Agent agent);
 
-        List<Agent> GetAllAgent();
+        List<Agent> GetAllAgents();
+
+        void addAgent(Agent agent);
 
         void UpdateAgentLocation(int id, string newLocation);
 
