@@ -23,22 +23,8 @@ namespace ManageField
         }
         static void Main(string[] args)
         {
-            Program program = new Program();
-            AgentDAL agentDAL = new AgentDAL();
-            Agent agent = program.createAgent();
-            agentDAL.addAgent(agent);
-            agentDAL.addAgent(agent);
-            agentDAL.addAgent(agent);
-
-            List<Agent> agents = agentDAL.GetAllAgents();
-            if (agents.Count > 0)
-            {
-
-                foreach (Agent a in agents)
-                {
-                    Console.WriteLine($"id = {a.id} nameCode = {a.nameCode}, name = {a.name}");
-                }
-            }
+            menu menu = new menu();
+            menu.startMenu();
         }
     }
 }
