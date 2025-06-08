@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace ManageField
 {
-    internal class Program
+    internal class DAL
     {
-        static void Main(string[] args)
-        {
-           
-        }
     }
 }
